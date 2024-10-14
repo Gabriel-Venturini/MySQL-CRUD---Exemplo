@@ -11,10 +11,10 @@ def connect(pwd=str):
             user="root",
             password=pwd
         )
-        return 'Connection established.'
+        return database
     except Exception as e:
         return(e)
     
 
 if __name__ == "__main__":
-    connect('example123')
+    print(connect('example123'))
