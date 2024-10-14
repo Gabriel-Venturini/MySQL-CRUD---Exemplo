@@ -7,7 +7,7 @@ class TestConnect(unittest.TestCase):
 
     def test_create(self):
         # test if the function can insert data into the db
-        connection = connect('maia1904')
+        connection = connect('example123')
         # dataset to test the function
         data = [['Carlos Almeida', 'carlos.almeida@example.com', 'Backend Developer', 2500.00],
                 ['Julia Nogueira', 'julia.nogueira@example.com', 'Frontend Developer', 3000.00],
