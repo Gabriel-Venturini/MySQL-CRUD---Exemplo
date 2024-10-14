@@ -1,0 +1,8 @@
+setup.py
+Basic_CRUD.egg-info/PKG-INFO
+Basic_CRUD.egg-info/SOURCES.txt
+Basic_CRUD.egg-info/dependency_links.txt
+Basic_CRUD.egg-info/top_level.txt
+app/__init__.py
+app/connect.py
+tests/__init__.py
