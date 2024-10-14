@@ -9,7 +9,8 @@ def connect(pwd=str):
         database = mysql.connector.connect(
             host="localhost",
             user="root",
-            password=pwd
+            password=pwd,
+            database="empresa"
         )
         return database
     except Exception as e:
