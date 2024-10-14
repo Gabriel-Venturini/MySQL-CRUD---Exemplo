@@ -2,6 +2,6 @@
 
 from setuptools import setup, find_packages
 
-setup(name='Basic_CRUD', version='1.0', packages=find_packages())
+setup(name='Basic_CRUD', version='1.1', packages=find_packages())
 
 # run this on terminal with: pip install -e .
