@@ -39,6 +39,14 @@ def read(database, table:str):
         return f"Error viewing table data: {e}"
     
 
+def update(database, table):
+    # UPDATE {table}
+    # SET {nome}='Paula Ribeiro', {email}='paula.ribeiro@email.com', {cargo}='Engenheira', {salario}=8000.90
+    # WHERE id=63;
+
+    # depois desenrolo
+    pass
+
 def delete(database, table: str, primary_key_name: str, pk_value: int):
     # delete records, the parameters are the table, the pk_name and the unique identifier
     # example: database, funcionarios, id, 3
