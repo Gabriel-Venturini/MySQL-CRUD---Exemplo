@@ -21,3 +21,16 @@ DELETE FROM funcionarios;
 
 -- Deleta funcionario especifico
 delete from funcionarios where id = 2;
+
+-- Inserir dados ficticios no BD
+INSERT INTO funcionarios (nome, email, cargo, salario) VALUES 
+('João Silva', 'joao.silva@email.com', 'Desenvolvedor', 4500.50),
+('Maria Oliveira', 'maria.oliveira@email.com', 'Gerente', 7500.00),
+('Carlos Souza', 'carlos.souza@email.com', 'Analista', 3800.25),
+('Ana Lima', 'ana.lima@email.com', 'Designer', 3200.40),
+('Pedro Fernandes', 'pedro.fernandes@email.com', 'Consultor', 5000.00),
+('Fernanda Costa', 'fernanda.costa@email.com', 'Especialista', 6200.75),
+('Roberto Dias', 'roberto.dias@email.com', 'Coordenador', 5500.60),
+('Camila Nunes', 'camila.nunes@email.com', 'Secretária', 2500.00),
+('Lucas Martins', 'lucas.martins@email.com', 'Estagiário', 1500.00),
+('Paula Ribeiro', 'paula.ribeiro@email.com', 'Engenheira', 8000.90);
