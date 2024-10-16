@@ -7,7 +7,7 @@ class TestConnect(unittest.TestCase):
 
     def test_create(self):
         # test if the function can insert data into the db
-        connection = connect('maia1904')
+        connection = connect('example123')
         # dataset to test the function
         data = [['Carlos Almeida', 'carlos.almeida@example.com', 'Backend Developer', 2500.00],
                 ['Julia Nogueira', 'julia.nogueira@example.com', 'Frontend Developer', 3000.00],
@@ -24,7 +24,7 @@ class TestConnect(unittest.TestCase):
     def test_delete(self):
         # checks if the function can delete data correctly
         # it is expected to have data bcs of the test_create so dont worry about data here
-        connection = connect('maia1904')
+        connection = connect('example123')
         # delete one record and test it
         delete_single_data = delete(connection, 'funcionarios', 'id', 24)
         self.assertEqual(delete_single_data, 'Successfully deleted 1 data.', delete_single_data)
