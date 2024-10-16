@@ -17,5 +17,7 @@ CREATE TABLE IF NOT EXISTS funcionarios (
 );
 
 -- Deleta todos os dados dos funcionarios
-DELETE FROM empresa.funcionarios
-WHERE id;
+DELETE FROM funcionarios;
+
+-- Deleta funcionario especifico
+delete from funcionarios where id = 2;
