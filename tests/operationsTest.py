@@ -1,6 +1,7 @@
 import unittest
+import pandas.core.frame
 from app.connect import connect
-from app.operations import create, delete
+from app.operations import create, delete, read
 
 class TestConnect(unittest.TestCase):
     # you can test all operations here
@@ -21,6 +22,13 @@ class TestConnect(unittest.TestCase):
             result = create(connection, nome, email, cargo, salario)  # calls the function
             self.assertEqual(result, "Data inserted with success.", result) # tests it
 
+    def test_read(self):
+        # simple function that creates a dataframe reads and returns it
+        connection = connect('example123')
+        table_name = 'funcionarios'
+        read_table = read(connection, table_name)
+        self.assertIsInstance(read_table, pandas.core.frame.DataFrame)
+
     def test_delete(self):
         # checks if the function can delete data correctly
         # it is expected to have data bcs of the test_create so dont worry about data here
@@ -31,7 +39,7 @@ class TestConnect(unittest.TestCase):
         # delete everything
         delete_data = delete(connection, 'funcionarios', '', 0)
         self.assertEqual(delete_data, 'Successfully deleted all data from the table.', delete_data)
-
+        
 
 if __name__ == '__main__':
     unittest.main()
