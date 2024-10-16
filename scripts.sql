@@ -34,3 +34,11 @@ INSERT INTO funcionarios (nome, email, cargo, salario) VALUES
 ('Camila Nunes', 'camila.nunes@email.com', 'Secretária', 2500.00),
 ('Lucas Martins', 'lucas.martins@email.com', 'Estagiário', 1500.00),
 ('Paula Ribeiro', 'paula.ribeiro@email.com', 'Engenheira', 8000.90);
+
+-- Visualiza tabela completa
+SELECT * FROM funcionarios;
+
+-- Atualiza dados de funcionario especifico
+UPDATE empresa.funcionarios
+SET nome='Paula Ribeiro', email='paula.ribeiro@email.com', cargo='Engenheira', salario=8000.90
+WHERE id=63;
