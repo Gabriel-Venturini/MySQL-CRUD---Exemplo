@@ -1,4 +1,5 @@
 from app.connect import connect
+import pandas as pd
 
 def create(database, nome, email, cargo, salario):
     # insert new records into the table
@@ -18,6 +19,24 @@ def create(database, nome, email, cargo, salario):
         return "Data inserted with success."
     except Exception as e:
         return f'Error inserting new data into the database: {e}'
+
+
+def read(database, table:str):
+    # shows the entire table
+    try:
+        db_cursor = database.cursor()
+        
+        # Creates a pandas dataframe for better visualization
+        query = f"SELECT * FROM {table}"
+        df = pd.read_sql(query, con=database)
+        
+        # Exibe o DataFrame
+        print(df)
+        
+        return df  # Returns dataframe to use if necessary
+    
+    except Exception as e:
+        return f"Error viewing table data: {e}"
     
 
 def delete(database, table: str, primary_key_name: str, pk_value: int):
@@ -55,10 +74,13 @@ if __name__ == '__main__':
     if connection:
         try:
             # insert data into the table
-            new_data = create(connection, 'Gabriel Venturini', 'example@example.com', 'Backend Developer', 2500.00)
+            # new_data = create(connection, 'Gabriel Venturini', 'example@example.com', 'Backend Developer', 2500.00)
             # deletes everything
-            delete_data = delete(connection, 'funcionarios', '', 0)
+            # delete_data = delete(connection, 'funcionarios', '', 0)
             # deletes just one value
-            delete_single_data = delete(connection, 'funcionarios', 'id', 2)
+            # delete_single_data = delete(connection, 'funcionarios', 'id', 2)
+            # views and read all data in a table
+            read_data = read(connection, 'funcionarios')
+            print(type(read_data))
         except Exception as e:
             print(f'Error while loading your requisition: {e}')
